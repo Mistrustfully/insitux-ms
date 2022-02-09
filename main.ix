@@ -1,10 +1,9 @@
 (function contruct_board who
     (let board (vec []))
     (for x range(10)
-        (let board (set-at board x (vec []))
+        (let board (set-at board x (vec [])))
         (for y range(10))
-    )
-    ({who: })
+    
 )
 
 (function ms x y owner
