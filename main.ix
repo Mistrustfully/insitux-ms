@@ -1,0 +1,6 @@
+(function ms x y
+    (print x)
+    (print y)
+)
+
+(ms 1, 1)
