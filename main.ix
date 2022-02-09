@@ -1,6 +1,14 @@
-(function ms x y
-    (print x)
-    (print y)
+(function contruct_board who
+    (let board (vec []))
+    (for x range(10)
+        (let board (set-at board x (vec []))
+        (for y range(10))
+    )
+    ({who: })
 )
 
-(ms 1, 1)
+(function ms x y owner
+    (print (y (x board))
+)
+
+(ms 1, 1, "fcat#9000")
