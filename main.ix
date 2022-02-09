@@ -5,8 +5,15 @@
     (var boards (push boards who board ))
 )
 
+(function render_line l
+    (print-str l)
+    (print-str "\n")
+)
+
 (function render_board who
-    (print (boards who))
+    (map
+        render_line
+    (boards who))
 )
 
 (function click who x y
@@ -25,5 +32,5 @@
         (render_board who))
 )
 
-(handler "new 5 10", "fcat")
-(handler "click 5 10", "fcat")
+(handler "new 10 10", "fcat")
+(handler "click 10 10", "fcat")
