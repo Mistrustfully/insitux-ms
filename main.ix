@@ -8,7 +8,7 @@
 )
 
 (function ms x y owner
-    (print (y (x board))
+    (print (y (x board)))
 )
 
 (ms 1, 1, "fcat#9000")
