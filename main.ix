@@ -3,7 +3,7 @@
     (for x range(10)
         (let board (set-at board x (vec [])))
         (for y range(10))
-    
+    )
 )
 
 (function ms x y owner
