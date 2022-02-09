@@ -6,8 +6,13 @@
     (var boards (push boards who board ))
 )
 
+(function render_char c
+    (if (= c 0) 
+        (print-str "⬛"))
+)
+
 (function render_line l
-    (print-str l)
+    (map render_char l)
     (print-str "\n")
 )
 
