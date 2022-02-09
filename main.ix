@@ -1,14 +1,29 @@
-(function construct_board who
-    (let board (vec []))
-    (for x range(10)
-        (let board (set-at board x (vec [])))
-        (for y range(10))
-    )
+(var boards (dict))
+(function construct_board who size_x size_y
+    (print size_y)
+    (var board (map #(map #(val 0) (range (to-num size_x))) (range (to-num size_y)))) ; 2d array magic :wow:
+    (var boards (push boards who board ))
 )
 
-(function ms x y owner
-    (let board (construct_board owner))
-    (print (y (x board)))
+(function render_board who
+    (print (boards who))
 )
 
-(ms 1, 1, "fcat#9000")
+(function click who x y
+    (print x y)
+)
+
+(function handler input who where channel source
+    (var split_input (split " " input))
+    (if (= (0 split_input) "new")
+        (construct_board who (1 split_input) (2 split_input)))
+    
+    (if (= (0 split_input) "click")
+        (click who (1 split_input) (2 split_input)))
+
+    (if (boards who)
+        (render_board who))
+)
+
+(handler "new 5 10", "fcat")
+(handler "click 5 10", "fcat")
