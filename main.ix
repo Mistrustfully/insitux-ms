@@ -34,8 +34,13 @@
     (if (= (0 split_input) "click")
         (click who (1 split_input) (2 split_input)))
 
+    (if (= (0 split_input) "status")
+        (print boards))
+
     (if (boards who)
         (render_board who))
+
+    (str "")
 )
 
 (handler "new 10 10", "fcat")
