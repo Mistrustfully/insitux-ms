@@ -2,7 +2,7 @@
     (var boards (dict)))
 
 (function construct_board who size_x size_y
-    (var board (map #(map #(val 0) (range (to-num size_x))) (range (to-num size_y)))) ; 2d array magic :wow:
+    (var board (repeat (repeat 0 (to-num size_x)) (to-num size_y))) ; 2d array magic :wow:
     (var boards (push boards who board ))
 )
 
@@ -43,7 +43,7 @@
     (str "")
 )
 
-(handler "new 10 10", "fcat")
-;(handler "click 10 10", "fcat")
+(handler "new 10 10", "dev")
+(handler "click 10 10", "dev")
 
 (str "")
