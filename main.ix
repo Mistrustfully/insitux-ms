@@ -8,7 +8,7 @@
 
 (function render_char c
     (if (= c 0) 
-        (print-str "⬛"))
+        (print-str "⬜"))
 )
 
 (function render_line l
@@ -36,7 +36,9 @@
 
     (if (boards who)
         (render_board who))
+
+    (return "")
 )
 
 (handler "new 10 10", "fcat")
-(handler "click 10 10", "fcat")
+;(handler "click 10 10", "fcat")
