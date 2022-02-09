@@ -1,4 +1,4 @@
-(function contruct_board who
+(function construct_board who
     (let board (vec []))
     (for x range(10)
         (let board (set-at board x (vec [])))
