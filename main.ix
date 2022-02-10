@@ -17,10 +17,11 @@
 )
 
 (function render_board who
-    (map
-        render_line
-    (boards who))
-)
+  (-> (boards who)
+      (map (map #(% "▢")))
+      (map (join ""))
+      (join "\n")
+      print))
 
 (function click who x y
     (print "")
