@@ -5,7 +5,10 @@
     (var board (repeat (repeat 0 (to-num size_x)) (to-num size_y))) ; 2d array magic :wow:
     (var boards (push boards who board ))
 )
-
+; c = 0 : Unclicked tile, no bomb.
+; c = 1 : Unclicked tile, bomb.
+; c = 2 : Clicked tile, no bomb
+; c = 3 : Clicked tile, bomb
 (function render_char c
     (if (= c 0) 
         (print-str "▢"))
@@ -35,7 +38,7 @@
         (click who (1 split_input) (2 split_input)))
 
     (if (= (0 split_input) "status")
-        (print boards))
+        (print boards) (return))
 
     (if (boards who)
         (render_board who))
