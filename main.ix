@@ -3,20 +3,15 @@
 
 (function construct_board who size_x size_y
     (var board (repeat (repeat 0 (to-num size_x)) (to-num size_y))) ; 2d array magic :wow:
-    (var boards (push boards who board ))
+    (var boards (boards who board ))
 )
 ; c = 0 : Unclicked tile, no bomb.
 ; c = 1 : Unclicked tile, bomb.
 ; c = 2 : Clicked tile, no bomb
 ; c = 3 : Clicked tile, bomb
-(function render_char c
+(function get_char_for_tile t
     (if (= c 0) 
-        (print-str "▢"))
-)
-
-(function render_line l
-    (map render_char l)
-    (print-str "\n")
+        (return "▢"))
 )
 
 (function render_board who
